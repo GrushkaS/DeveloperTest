@@ -5,7 +5,9 @@
         public static IEnumerable<int> MissingElements(this int[] arr)
         {
             if (arr.IsNullOrEmpty())
+            {
                 throw new ArgumentNullException(nameof(arr));
+            }
 
             var firstNumber = arr.First();
 
