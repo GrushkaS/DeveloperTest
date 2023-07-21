@@ -12,7 +12,7 @@
             get { return gears; }
             set
             {
-                if(gears <= 0 || gears > 7)
+                if(value <= 0 || value > 7)
                 {
                     throw new ArgumentOutOfRangeException(nameof(value));
                 }

@@ -1,4 +1,6 @@
-﻿using Task4.Extensions;
+﻿using Task1.Models;
+using Task2.Services;
+using Task4.Extensions;
 
 namespace ConsoleApp
 {
@@ -14,6 +16,10 @@ namespace ConsoleApp
 
             var string1 = "hello".ReverseString();
             var palindrom1 = "haah".IsPalindrome();
+
+            IInstanceService instanceService = new InstanceService();
+
+            var classes = instanceService.GetInstances<Vehicle>();
 
             Console.WriteLine("Task ended!");
             Console.ReadKey();

@@ -12,7 +12,7 @@
             get { return engineCapacity; }
             set
             {
-                if(engineCapacity <= 0 || engineCapacity > 2000)
+                if(value <= 0f || value > 2000f)
                 {
                     throw new ArgumentOutOfRangeException(nameof(value));
                 }
