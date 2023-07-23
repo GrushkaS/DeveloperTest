@@ -6,6 +6,7 @@ namespace Task1.Models
     {
         private int maxSpeed;
 
+
         public Vehicle(int maxSpeed, VehicleColor vehicleColor, string model, double price) 
         {
             MaxSpeed = maxSpeed;
@@ -13,8 +14,6 @@ namespace Task1.Models
             Model = model;
             Price = price;
         }
-
-
 
         public int MaxSpeed
         {

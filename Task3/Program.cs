@@ -1,5 +1,4 @@
 ﻿using System.Configuration;
-using System.Collections.Specialized;
 using Task1.Models;
 using Task2.Services;
 using System.Reflection;
@@ -18,19 +17,19 @@ namespace Task3
 
             Console.WriteLine("Hello, Task3!");
 
-            IInstanceService instanceService = new InstanceService();
 
+            IInstanceService instanceService = new InstanceService();
             var instances = instanceService.GetInstances<Vehicle>(ConfigurationManager.AppSettings.Get("AssemblyNameToload"));
 
 
             Console.WriteLine("All instances:");
-            instanceService.PrintInstanceNamesToConsole(instances);
+            PrintInstanceNamesToConsole(instanceService.GetInstanceNames(instances));
 
 
             var searchedInstances = instanceService.SearchInstancesByName(instances, "Bi");
 
             Console.WriteLine("Searched instances:");
-            instanceService.PrintInstanceNamesToConsole(searchedInstances);
+            PrintInstanceNamesToConsole(instanceService.GetInstanceNames(searchedInstances));
 
 
             instanceService.SaveInstancesToDisk(
@@ -44,6 +43,12 @@ namespace Task3
             Console.ReadKey();
         }
 
-
+        private static void PrintInstanceNamesToConsole(IEnumerable<string> names)
+        {
+            foreach ( var name in names)
+            {
+                Console.WriteLine(name);
+            }
+        }
     }
 }

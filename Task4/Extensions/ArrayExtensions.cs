@@ -1,6 +1,8 @@
-﻿namespace Task4.Extensions
+﻿using Common.Extensions;
+
+namespace Task4.Extensions
 {
-    public static class EnumerableExtensions
+    public static class ArrayExtensions
     {
         public static IEnumerable<int> MissingElements(this int[] arr)
         {
@@ -14,11 +16,6 @@
             var lastNumber = arr.Last();
 
             return Enumerable.Range(firstNumber, lastNumber - firstNumber).Except(arr);
-        }
-
-        public static bool IsNullOrEmpty<T>(this IEnumerable<T> array)
-        {
-            return (array == null || array.Count() == 0);
         }
     }
 }

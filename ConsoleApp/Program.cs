@@ -19,7 +19,7 @@ namespace ConsoleApp
 
             IInstanceService instanceService = new InstanceService();
 
-            var classes = instanceService.GetInstances<Vehicle>();
+            //var classes = instanceService.GetInstances<Vehicle>();
 
             Console.WriteLine("Task ended!");
             Console.ReadKey();

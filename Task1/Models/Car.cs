@@ -7,6 +7,8 @@
         {
             EngineCapacity = 400.0f;
         }
+
+
         public float EngineCapacity
         {
             get { return engineCapacity; }

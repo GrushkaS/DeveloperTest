@@ -2,7 +2,7 @@
 
 namespace Task4.Tests
 {
-    public class Task4EnumerableExtensionsTest
+    public class Task4ArrayExtensionsTests
     {
         [Fact]
         public void FindingMissingElements()
